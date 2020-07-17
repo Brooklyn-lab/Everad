@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Everad</title>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="./libs/bootstrap.min.css" />
+   <link rel="stylesheet" href="./src/index.css" />
+</head>
+
+<body>
+   <header class="header">
+      <div class="container">
+         <div class="row">
+            <div class="header__title col-xl-12">
+               <div class="header__logo logo col-xl-3 offset-xl-2">
+                  <div class="logo__img">
+                     <img src="./img/Vector_Smart_Object.png" alt="">
+                  </div>
+                  <h3 class="logo__text">Микоцин</h3>
+               </div>
+               <div class="header__awards awards col-xl-7">
+                  <div class="awords__item">
+                     <div class="awords__icon">
+                        <img src="./img/header-icon1.png" alt="first">
+                     </div>
+                     <p class="awords__text">
+                        №1 Для избавления от любого типа грибка
+                     </p>
+                  </div>
+                  <div class="awords__item">
+                     <div class="awords__icon">
+                        <img src="./img/header-icon2.png" alt="recommend">
+                     </div>
+                     <p class="awords__text">
+                        Рекомендован дерматологами
+                     </p>
+                  </div>
+                  <div class="awords__item">
+                     <div class="awords__icon">
+                        <img src="./img/header-icon3.png" alt="clients">
+                     </div>
+                     <p class="awords__text">
+                        13000+ довольных клиентов за 2018 год
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="header__content col-xl-7 offset-xl-5">
+               <div class="header__about about col-xl-7">
+                  <div class="about__title">
+                     <h2 class="about__header">Комплексное избавление от грибка — <span
+                           class="about__span about__span_red">изнутри</span><span class="about__span"> и </span><span
+                           class="about__span about__span_green">снаружи</span></h2>
+                  </div>
+                  <ul class="header__list list">
+                     <li class="list__item">
+                        <div class="list__numberWrapperTop">
+                           <div class="list__numberWrapperMidle">
+                              <p class="list__number list__number_first">2 в 1</p>
+                           </div>
+                        </div>
+                        <p class="list__text">
+                           Комплекс Микоцин <span class="list__span">устраняет зуд, неприятный запах</span> и возвращает
+                           эстетичный вид
+                        </p>
+                     </li>
+                     <li class="list__item">
+                        <div class="list__numberWrapperTop">
+                           <div class="list__numberWrapperMidle">
+                              <p class="list__number">1</p>
+                           </div>
+                        </div>
+                        <p class="list__text">
+                           <span class="list__span red">Таблетки</span> Микоцин <span class="list__span">уничтожают все
+                              виды грибка</span> на ногтях и коже
+                        </p>
+                     </li>
+                     <li class="list__item">
+                        <div class="list__numberWrapperTop">
+                           <div class="list__numberWrapperMidle">
+                              <p class="list__number">2</p>
+                           </div>
+                        </div>
+                        <p class="list__text">
+                           <span class="list__span green">Гель</span> Микоцин <span class="list__span">восстанавливает
+                              кожу</span> и создает на ней <span class="list__span">защитный
+                              барьер</span>
+                        </p>
+                     </li>
+                  </ul>
+               </div>
+               <div class="header__form form col-xl-5">
+                  <div class="form__free">
+                     <img src="./img/form-icon.png" alt="car" class="form__car">
+                     <span class="form__span">Бесплатно</span>
+                  </div>
+                  <div class="form__titleWrap">
+                     <h3 class="form__title">Успейте заказать со скидкой</h3>
+                     <p class="form__subtitle">до 10.09.2018</p>
+                  </div>
+                  <div class="form__prices">
+                     <div class="form__priseOne">
+                        <p>старая цена</p>
+                        <div>
+                           <img src="" alt="">
+                        </div>
+                     </div>
+                     <div class="form__priseTwo">
+                        <p>новая цена</p>
+                        <div>
+                           <img src="" alt="">
+                        </div>
+                     </div>
+                  </div>
+                  <form action="#" class="form__inputs">
+                     <label class="form__label label-form">
+                        <span class="label-form__logo"><img src="./img/form-icon3.png" alt="name"></span>
+                        <input class="form__input" type="text" name="name" placeholder="Имя">
+                     </label>
+                     <label class="form__label label-form">
+                        <span class="label-form__logo"><img src="./img/form-icon4.png" alt="name"></span>
+                        <input class="form__input" type="tel" name="telefone" placeholder="Телефон">
+                     </label>
+                     <label for="formButton" class="form__button">
+                        <span class="form__buttonWrap">
+                           <span class="form__labelSpan">Заказать</span>
+                        со скидкой
+                        </span>
+                     </label>
+                     <button class="form__btn" type="button" id="formButton"></button>
+                  </form>
+                  <p class="form__text">Осталось<span class="form__numberTen"> 10 </span>упаковок со скидкой</p>
+                  <div class="form__footer form-footer">
+                     <img src="./img/form-icon2.png" alt="sheild" class="form-footer__logo">
+                     <p class="form-footer__text">Ваши данные защищены!</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <footer class="footer"></footer>
+
+   <script src="./jquery-3.5.0.js"></script>
+   <script src="./src/index.js"></script>
+</body>
+
+</html>
