@@ -1,13 +1,15 @@
 // ------------- header top ----------------------
 
 .header {
-   padding: 15px 0 0 0;
+   padding: 15px 0 150px 0;
    background: url("../img/background-header2.png") no-repeat center/cover;
 
    &__title {
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 10;
+      flex-wrap: wrap;
    }
 
    &__awards {
@@ -15,12 +17,68 @@
       justify-content: center;
       align-items: center;
       padding-left: 0;
+
+      @media screen and (max-width: 992px) {
+         padding-left: 15px;
+      }
+   }
+
+   &__production {
+      position: relative;
+
+      @media screen and (max-width: 992px) {
+         display: none;
+      }
+   }
+
+   &__legs {
+      position: absolute;
+      top: -45%;
+      left: -50%;
+   }
+
+   &__pils {
+      position: absolute;
+      bottom: -20%;
+      left: -17%;
+   }
+
+   &__value {
+      position: absolute;
+      width: 100px;
+      height: 40px;
+      border-radius: 8px;
+      background-color: #ff6b00;
+      color: #fff;
+      @include adaptive-font(34, 24);
+      line-height: 24px;
+      padding: 9px;
+      bottom: 29%;
+      right: 30%;
+   }
+
+   &__value_green {
+      background-color: #a8ca3f;
+      bottom: 8%;
+      right: 9%;
    }
 }
+.value {
+   &__span {
+      margin-left: 5px;
+   }
+}
+
+//----------------block logo------------------
+
 .logo {
    display: flex;
    justify-content: center;
    align-items: center;
+
+   @media screen and (max-width: 768px) {
+      margin-bottom: 20px;
+   }
 
    &__img {
       display: flex;
@@ -31,10 +89,13 @@
 
    &__text {
       color: #383334;
-      @include adaptive-font(22, 19);
+      @include adaptive-font(22, 22);
       line-height: 40px;
    }
 }
+
+// ------------- block awords----------------------
+
 .awords {
    &__item {
       display: flex;
@@ -43,10 +104,18 @@
       &:not(:last-child) {
          margin-right: 30px;
       }
+
+      @media screen and (max-width: 768px) {
+         flex-wrap: wrap;
+      }
    }
 
    &__icon {
       margin-right: 10px;
+
+      @media screen and (max-width: 768px) {
+         margin-bottom: 10px;
+      }
    }
 
    &__text {
@@ -54,6 +123,10 @@
       color: #666666;
       line-height: 18px;
       font-style: italic;
+
+      @media screen and (max-width: 768px) {
+         text-align: center;
+      }
    }
 }
 
@@ -63,32 +136,56 @@
    &__content {
       margin-top: 57px;
       display: flex;
-      padding-left: 0;
+      justify-content: center;
+
+      @media screen and (max-width: 650px) {
+         flex-wrap: wrap;
+         margin-top: 30px;
+      }
    }
 
-   &__progress {
+   &__arrow {
+      top: -41px;
+      left: 24px;
       position: absolute;
-      top: 51.5%;
-      left: 6.5%;
+   }
+
+   &__plus {
+      bottom: -47px;
+      left: 24px;
+      position: absolute;
    }
 }
+
+//--------------block about-------------------------
+
 .about {
    padding: 0;
 
    &__title {
       max-width: 305px;
       width: 100%;
+
+      @media screen and (max-width: 768px) {
+         max-width: 415px;
+         margin: 0 auto;
+      }
+
+      @media screen and (max-width: 650px) {
+         max-width: 500px;
+         text-align: center;
+      }
    }
 
    &__header {
       color: #383334;
-      font-size: 44px;
+      @include adaptive-font(44, 34);
       font-weight: 900;
       line-height: 44px;
    }
 
    &__span {
-      font-size: 34px;
+      @include adaptive-font(34, 24);
       font-weight: 700;
       line-height: 38px;
 
@@ -127,11 +224,20 @@
    margin-top: 4px;
    position: relative;
 
+   @media screen and (max-width: 650px) {
+      max-width: 500px;
+      margin: 0 auto 30px;
+   }
+
    &__item {
       margin: 40px 26px 0 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @media screen and (max-width: 650px) {
+         margin-right: 0;
+      }
    }
 
    &__numberWrapperTop {
@@ -145,6 +251,7 @@
       align-items: center;
       padding: 7px;
       margin-right: 18px;
+      position: relative;
    }
 
    &__numberWrapperMidle {
@@ -154,7 +261,6 @@
       height: 100%;
       background: #a7c93d;
       border-radius: 50%;
-      padding: 14px;
       display: flex;
       justify-content: center;
       padding: 10px 0;
@@ -162,7 +268,7 @@
 
    &__number {
       color: #fff;
-      font-size: 20px;
+      @include adaptive-font(20, 16);
       font-weight: 700;
       display: flex;
 
@@ -172,14 +278,14 @@
    }
 
    &__text {
-      color: #444444;
-      font-size: 20px;
+      color: #444;
+      @include adaptive-font(20, 16);
       font-weight: 400;
       line-height: 24px;
    }
 
    &__span {
-      color: #000000;
+      color: #000;
       font-weight: 500;
    }
 }
@@ -224,8 +330,11 @@
    padding: 0;
    position: relative;
 
+   @media screen and (max-width: 768px) {
+      margin-left: 10px;
+   }
+
    &__free {
-      padding-bottom: 15px;
       padding: 0 15px 15px;
       justify-content: center;
       align-items: center;
@@ -245,8 +354,8 @@
    }
 
    &__span {
-      color: #444444;
-      font-size: 16px;
+      color: #444;
+      @include adaptive-font(16, 12);
       line-height: 18px;
    }
 
@@ -260,8 +369,8 @@
    }
 
    &__title {
-      color: #000000;
-      font-size: 20px;
+      color: #000;
+      @include adaptive-font(20, 16);
       line-height: 22px;
    }
 
@@ -289,7 +398,8 @@
       max-width: 110px;
       border: 0;
       background: #eef2f7;
-      color: #666666;
+      color: #666;
+      @include adaptive-font(16, 14);
       font-size: 16px;
       font-weight: 400;
       line-height: 18px;
@@ -297,8 +407,8 @@
          outline: none;
       }
       &::placeholder {
-         color: #666666;
-         font-size: 16px;
+         color: #666;
+         @include adaptive-font(16, 14);
          font-weight: 400;
          line-height: 18px;
       }
@@ -310,9 +420,9 @@
       background: #ffc002;
       border: 3px solid #ffd34e;
       border-radius: 32px;
-      color: #000000;
+      color: #000;
       line-height: 16px;
-      font-size: 16px;
+      @include adaptive-font(16, 14);
       padding: 7px 30px;
       font-weight: 700;
       cursor: pointer;
@@ -336,13 +446,13 @@
 
    &__labelSpan {
       font-weight: 700;
-      font-size: 28px;
+      @include adaptive-font(28, 24);
       line-height: 22px;
    }
 
    &__text {
       color: #666;
-      font-size: 18px;
+      @include adaptive-font(18, 16);
       line-height: 18px;
    }
 
@@ -355,6 +465,10 @@
       position: absolute;
       top: 32%;
       right: -12%;
+
+      @media screen and (max-width: 340px) {
+         right: -10%;
+      }
    }
 }
 .price {
@@ -365,23 +479,22 @@
 
    &__old {
       color: #666;
-      font-size: 14px;
+      @include adaptive-font(14, 12);
       line-height: 24px;
       position: relative;
    }
 
    &__new {
       color: #000;
-      font-size: 14px;
+      @include adaptive-font(14, 12);
       line-height: 24px;
    }
 
    &__oldNumber {
-      margin-top: 7px;
       padding: 8px 12px;
       border-radius: 5px;
       background: transparent;
-      color: #000000;
+      color: #000;
       font-size: 34px;
       line-height: 24px;
       font-weight: 300;

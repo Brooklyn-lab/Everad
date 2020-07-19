@@ -6,14 +6,8 @@
    text-align: center;
    flex-direction: column;
 
-   &__body {
-   }
-
    &__logo {
       margin-bottom: 18px;
-   }
-
-   &__header {
    }
 
    &__title {
@@ -28,9 +22,6 @@
       font-size: 24px;
       font-weight: 700;
       line-height: 28px;
-   }
-
-   &__content {
    }
 }
 .item {
@@ -95,6 +86,17 @@
       color: #444444;
       font-size: 18px;
       line-height: 28px;
+      position: relative;
+
+      &::after {
+         position: absolute;
+         content: "";
+         background: #becbd8;
+         width: 50px;
+         height: 3px;
+         top: -20px;
+         left: 0;
+      }
    }
 }
 .statistics {
