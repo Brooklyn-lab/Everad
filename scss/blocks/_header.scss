@@ -14,6 +14,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding-left: 0;
    }
 }
 .logo {
@@ -62,6 +63,13 @@
    &__content {
       margin-top: 57px;
       display: flex;
+      padding-left: 0;
+   }
+
+   &__progress {
+      position: absolute;
+      top: 51.5%;
+      left: 6.5%;
    }
 }
 .about {
@@ -117,9 +125,10 @@
 }
 .list {
    margin-top: 4px;
+   position: relative;
 
    &__item {
-      margin: 40px 30px 0 0;
+      margin: 40px 26px 0 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -205,25 +214,40 @@
 
 // ------------- header bottom form----------------------
 
-.header {
-   &__form {
-   }
-}
 .form {
    border: 7px solid #a8ca3f;
+   max-width: 270px;
    border-radius: 15px;
    justify-content: center;
    align-items: center;
    text-align: center;
    padding: 0;
+   position: relative;
 
    &__free {
+      padding-bottom: 15px;
+      padding: 0 15px 15px;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      border: 7px solid #a8ca3f;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      border-top: 0;
+      background: #f3f9ff;
+      position: absolute;
+      top: -1.3%;
+      left: 19%;
    }
 
    &__car {
+      margin-right: 8px;
    }
 
    &__span {
+      color: #444444;
+      font-size: 16px;
+      line-height: 18px;
    }
 
    &__titleWrap {
@@ -231,7 +255,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 0 0 18px 0;
+      margin: 48px 0 18px 0;
       padding: 0 20px;
    }
 
@@ -245,18 +269,6 @@
       color: #ff6b00;
       font-weight: 500;
       line-height: 22px;
-   }
-
-   &__prices {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
-
-   &__priseOne {
-   }
-
-   &__priseTwo {
    }
 
    &__inputs {
@@ -293,22 +305,33 @@
    }
 
    &__button {
-      border-radius: 32px;
-      border: 1px solid #ffc002;
+      max-width: 210px;
+      width: 100%;
       background: #ffc002;
+      border: 3px solid #ffd34e;
+      border-radius: 32px;
       color: #000000;
       line-height: 16px;
       font-size: 16px;
-      padding: 11.5px 45px;
-      margin-bottom: 20px;
+      padding: 7px 30px;
       font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 0;
+   }
+
+   &__buttonWrapp {
+      max-width: 218px;
+      width: 100%;
+      border-radius: 36px;
+      background: #ffc002;
+      border: 0;
+      padding: 5px;
+      margin-bottom: 20px;
+      cursor: pointer;
    }
 
    &__btn {
       display: none;
-   }
-
-   &__buttonWrap {
    }
 
    &__labelSpan {
@@ -327,13 +350,87 @@
       color: #9dbd39;
       font-weight: 500;
    }
+
+   &__arrow {
+      position: absolute;
+      top: 32%;
+      right: -12%;
+   }
+}
+.price {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 15px;
+
+   &__old {
+      color: #666;
+      font-size: 14px;
+      line-height: 24px;
+      position: relative;
+   }
+
+   &__new {
+      color: #000;
+      font-size: 14px;
+      line-height: 24px;
+   }
+
+   &__oldNumber {
+      margin-top: 7px;
+      padding: 8px 12px;
+      border-radius: 5px;
+      background: transparent;
+      color: #000000;
+      font-size: 34px;
+      line-height: 24px;
+      font-weight: 300;
+      margin-top: 7px;
+   }
+
+   &__line {
+      position: absolute;
+      content: "";
+      background: #cd8d71;
+      width: 85%;
+      height: 2px;
+      left: 8%;
+      top: 65%;
+   }
+
+   &__number {
+      padding: 8px 12px;
+      border-radius: 5px;
+      background: #ff6b00;
+      background-image: linear-gradient(to right, #ffbc02 0%, #ffce02 100%);
+      color: #000000;
+      font-size: 34px;
+      line-height: 24px;
+      font-weight: 700;
+      margin-top: 7px;
+   }
+
+   &__span {
+      font-weight: 400;
+      position: relative;
+   }
+}
+.pseudoOne {
+   transform: rotate(18deg);
+}
+.pseudoTwo {
+   transform: rotate(-18deg);
 }
 .form-footer {
    background: #eef2f7;
    padding: 11px 0 14px;
+   border: 0;
+   border-bottom-left-radius: 8px;
+   border-bottom-right-radius: 8px;
    display: flex;
    justify-content: center;
    align-items: center;
+   margin-top: 15px;
 
    &__logo {
       margin-right: 12px;
