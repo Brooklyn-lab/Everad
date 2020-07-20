@@ -51,19 +51,18 @@
             </div>
          </div>
          <div class="row">
-            <div class="header__production col-lg-4 col-xl-5">
+            <div class="header__production col-md-12 col-lg-4 col-xl-5">
                <div class="header__legs">
                   <img src="./img/legs.png" alt="legs">
                </div>
                <div class="header__pils">
                   <img src="./img/pills.png" alt="pils">
                </div>
-               <div class="header__value value">
-                  <p>299<span class="value__span">&#8381;</span></p>
-               </div>
-               <div class="header__value value header__value_green">
-                  <p>299<span class="value__span">&#8381;</span></p>
-               </div>
+               <span class="header__value">299 <span>&#8381;</span></span>
+               <span class="header__value header__value_green">299 <span>&#8381;</span></span>
+            </div>
+            <div class="header__pilsMini">
+               <img src="./img/pills.png" alt="pils">
             </div>
             <div class="header__content col-md-12 col-lg-8 col-xl-7">
                <div class="header__about about col-md-6 offset-md-1 offset-lg-0 col-lg-7">
@@ -175,22 +174,24 @@
    <footer class="footer">
       <div class="container">
          <div class="row">
-            <div class="footer__body col-12">
-               <div class="footer__logo">
+            <div class="footer__body col-xl-12">
+               <div class="footer__logo col-12">
                   <img src="./img/Vector_Smart_Object.png" alt="Everad">
                </div>
-               <div class="footer__header">
+               <div class="footer__header col-12">
                   <h1 class="footer__title">Грибок – это опасная инфекция</h1>
                   <p class="footer__subtitle">
                      которая угрожает вам и вашим близким, ведь с каждым днем грибок приводит
                      к:
                   </p>
                </div>
-               <div class="footer__content item">
-                  <div class="item__body">
+               <div class="footer__content item col-xl-12">
+                  <div class="item__body col-md-6 col-xl-4">
                      <div class="item__header">
-                        <div class="item__number">1</div>
-                        <img class="item__logo" src="./img/footer-logo1.png" alt="fungus">
+                        <div class="item__logoWrap">
+                           <img class="item__logo" src="./img/footer-logo1.png" alt="fungus">
+                           <span class="item__number">1</span>
+                        </div>
                         <p class="item__title">
                            Сложным формам аллергии
                         </p>
@@ -201,10 +202,12 @@
                         </p>
                      </div>
                   </div>
-                  <div class="item__body">
+                  <div class="item__body col-md-6 col-xl-4">
                      <div class="item__header">
-                        <div class="item__number item__number_two">2</div>
-                        <img class="item__logo" src="./img/footer-logo2.png" alt="fungus">
+                        <div class="item__logoWrap">
+                           <img class="item__logo" src="./img/footer-logo2.png" alt="fungus">
+                           <span class="item__number item__number_two">2</span>
+                        </div>
                         <p class="item__title">
                            Потере ногтя и ампутации пальца
                         </p>
@@ -215,10 +218,12 @@
                         </p>
                      </div>
                   </div>
-                  <div class="item__body">
+                  <div class="item__body col-md-12 col-xl-4">
                      <div class="item__header">
-                        <div class="item__number item__number_three">3</div>
-                        <img class="item__logo" src="./img/footer-logo3.png" alt="fungus">
+                        <div class="item__logoWrap">
+                           <img class="item__logo" src="./img/footer-logo3.png" alt="fungus">
+                           <span class="item__number item__number_three">3</span>
+                        </div>
                         <p class="item__title">
                            Тяжелому поражению внутренних органов
                         </p>

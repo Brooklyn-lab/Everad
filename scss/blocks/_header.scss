@@ -4,6 +4,11 @@
    padding: 15px 0 150px 0;
    background: url("../img/background-header2.png") no-repeat center/cover;
 
+   @media screen and (max-width: 992px) {
+      padding-bottom: 0;
+      background: #f3f9ff;
+   }
+
    &__title {
       display: flex;
       justify-content: center;
@@ -21,6 +26,10 @@
       @media screen and (max-width: 992px) {
          padding-left: 15px;
       }
+
+      @media screen and (max-width: 768px) {
+         padding: 0;
+      }
    }
 
    &__production {
@@ -35,6 +44,10 @@
       position: absolute;
       top: -45%;
       left: -50%;
+
+      @media screen and (min-width: 1500px) {
+         margin-top: 60px;
+      }
    }
 
    &__pils {
@@ -50,22 +63,41 @@
       border-radius: 8px;
       background-color: #ff6b00;
       color: #fff;
-      @include adaptive-font(34, 24);
+      word-spacing: -7px;
+      font-size: 34px;
       line-height: 24px;
       padding: 9px;
-      bottom: 29%;
+      bottom: 30%;
       right: 30%;
+
+      @media screen and (min-width: 1540px) {
+         bottom: 26%;
+      }
    }
 
    &__value_green {
       background-color: #a8ca3f;
       bottom: 8%;
       right: 9%;
+
+      @media screen and (min-width: 1540px) {
+         bottom: 6%;
+      }
    }
-}
-.value {
-   &__span {
-      margin-left: 5px;
+
+   &__pilsMini {
+      display: flex;
+      margin: 30px auto 0;
+      padding: 0 15px;
+
+      img {
+         width: 100%;
+         height: auto;
+      }
+
+      @media screen and (min-width: 992px) {
+         display: none;
+      }
    }
 }
 
@@ -103,6 +135,10 @@
       align-items: center;
       &:not(:last-child) {
          margin-right: 30px;
+
+         @media screen and (max-width: 768px) {
+            margin-right: 10px;
+         }
       }
 
       @media screen and (max-width: 768px) {
@@ -120,7 +156,7 @@
 
    &__text {
       @include adaptive-font(16, 14);
-      color: #666666;
+      color: #666;
       line-height: 18px;
       font-style: italic;
 
@@ -163,7 +199,7 @@
    padding: 0;
 
    &__title {
-      max-width: 305px;
+      max-width: 330px;
       width: 100%;
 
       @media screen and (max-width: 768px) {
@@ -225,7 +261,7 @@
    position: relative;
 
    @media screen and (max-width: 650px) {
-      max-width: 500px;
+      max-width: 335px;
       margin: 0 auto 30px;
    }
 
@@ -516,7 +552,7 @@
       border-radius: 5px;
       background: #ff6b00;
       background-image: linear-gradient(to right, #ffbc02 0%, #ffce02 100%);
-      color: #000000;
+      color: #000;
       font-size: 34px;
       line-height: 24px;
       font-weight: 700;
@@ -550,8 +586,8 @@
    }
 
    &__text {
-      color: #666666;
-      font-size: 14px;
+      color: #666;
+      @include adaptive-font(14, 12);
       line-height: 16.52px;
    }
 }
