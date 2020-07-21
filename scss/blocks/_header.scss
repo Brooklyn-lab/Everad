@@ -215,15 +215,23 @@
 
    &__header {
       color: #383334;
-      @include adaptive-font(44, 34);
+      font-size: 44px;
       font-weight: 900;
       line-height: 44px;
+
+      @media screen and (max-width: 768px) {
+         font-size: 36px;
+      }
    }
 
    &__span {
-      @include adaptive-font(34, 24);
+      font-size: 34px;
       font-weight: 700;
       line-height: 38px;
+
+      @media screen and (max-width: 768px) {
+         font-size: 30px;
+      }
 
       &_red {
          position: relative;
@@ -370,6 +378,10 @@
       margin-left: 10px;
    }
 
+   @media screen and (max-width: 650px) {
+      margin-left: 0;
+   }
+
    &__free {
       padding: 0 15px 15px;
       justify-content: center;
@@ -382,7 +394,7 @@
       background: #f3f9ff;
       position: absolute;
       top: -1.3%;
-      left: 19%;
+      left: 18%;
    }
 
    &__car {
@@ -490,6 +502,7 @@
       color: #666;
       @include adaptive-font(18, 16);
       line-height: 18px;
+      padding: 0 15px;
    }
 
    &__numberTen {
@@ -580,6 +593,12 @@
    justify-content: center;
    align-items: center;
    margin-top: 15px;
+
+   @media screen and (min-width: 1500px) {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+   }
 
    &__logo {
       margin-right: 12px;
